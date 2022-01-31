@@ -47,7 +47,6 @@ public class AuthorisationServiceImplementation implements AuthorisationService 
             throw new InvalidLoginException("User is not active", "User is not active");
         }
 
-
         LoginResponseDto loginResponseDto = new LoginResponseDto();
         loginResponseDto.setStatus(200);
         loginResponseDto.setMessage("Login Successful");

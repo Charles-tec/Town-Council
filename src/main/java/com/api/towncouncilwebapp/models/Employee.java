@@ -18,7 +18,7 @@ public class Employee {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Integer id;
 
     @Column(name = "firstname")
     private String firstName;
@@ -26,32 +26,27 @@ public class Employee {
     @Column(name = "lastname")
     private String lastName;
 
-    @JsonIgnore
+
     @Column(name = "username")
     private String username;
-    private String email;
 
     @JsonIgnore
+    private String email;
+
+
     private String password;
 
     @JsonIgnore
     private String phone;
 
-    @JsonIgnore
+  //  @JsonIgnore
     private String address;
-
-    @JsonIgnore
-    private Enum type;
-
-    @JsonIgnore
-    @Column(name = "supervisorcode")
-    private String supervisorCode;
 
     @JsonIgnore
     @Column(name = "status")
     private boolean status;
 
-    @JsonIgnore
+   @JsonIgnore
     @Column(name = "islogged")
     private boolean isLogged;
 

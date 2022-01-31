@@ -2,6 +2,7 @@ package com.api.towncouncilwebapp.controllers;
 
 import com.api.towncouncilwebapp.dtos.LoginResponseDto;
 import com.api.towncouncilwebapp.dtos.LoginTo;
+import com.api.towncouncilwebapp.models.Employee;
 import com.api.towncouncilwebapp.services.AuthorisationService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.RequiredArgsConstructor;
@@ -28,5 +29,7 @@ public class AuthorisationController {
     public ResponseEntity<LoginResponseDto> authenticateUser(@RequestBody LoginTo loginTo) {
         return ResponseEntity.ok(authService.login(loginTo.getUsername(), loginTo.getPassword()));
     }
+
+
 
 }
